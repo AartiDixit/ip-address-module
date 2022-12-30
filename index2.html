@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IP Address</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        #ip{
+    position: absolute;
+    top: 0.9rem;
+    left: 37rem;
+    font-size: 21px;
+    font-weight: bold;
+} 
+  </style>
+    <link rel="stylesheet" href="style.css"> 
+  </head>
+
+  <body>
+    <div class="box">
+      <h2>MY Public IP ADDRESS:</h2>
+      <p id="ip"></p>
+      <table >
+        <tr>
+          <td>Lat: <span id="lat" style="font-weight: 500;"></span></td>
+          <td style="padding-left: 3rem;">City: <span id="city" style="font-weight: 500;"></span></td>
+          <td style="padding-left: 3rem;">Organisation: <span id="organisation" style="font-weight: 500;"></span></td>
+        </tr>
+        <tr>
+            <td>Long: <span id="long" style="font-weight: 500;"></span></td>
+            <td style="padding-left: 3rem;">Region: <span id="region" style="font-weight: 500;"></span></td>
+            <td style="padding-left: 3rem;">Hostname: <span id="hostname" style="font-weight: 500;"></span></td>
+          </tr>
+        </table>
+     <iframe src="https://maps.google.com/maps?q=19.0748, 72.8856&output=embed"
+        width="800" 
+        height="400" 
+        frameborder="0" 
+        style="border:0">
+     </iframe>
+        <table>
+            <tr>
+                <td>TimeZone: <span id="timezone" style="font-weight: 500;"></span></td>
+            </tr>
+            <tr>
+                <td>Date And Time: <span id="date" style="font-weight: 500;"></span></td>
+            </tr>
+            <tr>
+                <td>Pincode: <span id="pincode" style="font-weight: 500;"></span></td>
+            </tr>
+            <tr>
+                <td>Message: <span id="message" style="font-weight: 500;"></span></td>
+            </tr>
+        </table>
+        <div class="place">
+            <i class="fa fa-search" aria-hidden="true"></i>
+            <input  id="input" type="text" placeholder="Filter" onkeyup="filterData(event.target.value)">    
+        </div>
+        
+
+        <div id="main-container">
+           
+                </div>
+            
+        </div>
+        <script src="script.js"></script>
+</body>
+</html>
